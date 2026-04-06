@@ -15,6 +15,7 @@ import pandas as pd
 from scipy.optimize import minimize
 from scipy.stats import linregress
 import json
+import subprocess
 
 
 def load_excel_sheet(file_name, sheet_name):
@@ -735,10 +736,10 @@ class initClass:
 params = load_object(paramsClass, "params.txt")
 
 time = np.loadtxt("data/"+'time.txt',  delimiter=',')
-r_mat = np.loadtxt("data/"+'r_mat.txt',  delimiter=',')
-th_1_mat = np.loadtxt("data/"+'th_1_mat.txt', delimiter=',')
-th_2_mat = np.loadtxt("data/"+'th_2_mat.txt',  delimiter=',')
-th_3_mat = np.loadtxt("data/"+'th_3_mat.txt',  delimiter=',')
+#r_mat = np.loadtxt("data/"+'r_mat.txt',  delimiter=',')
+#th_1_mat = np.loadtxt("data/"+'th_1_mat.txt', delimiter=',')
+#th_2_mat = np.loadtxt("data/"+'th_2_mat.txt',  delimiter=',')
+#th_3_mat = np.loadtxt("data/"+'th_3_mat.txt',  delimiter=',')
 A_w_mat = np.loadtxt("data/"+'A_w_mat.txt',   delimiter=',')
 A_c_mat = np.loadtxt("data/"+'A_c_mat.txt',  delimiter=',')
 
@@ -976,3 +977,5 @@ plt.close()
 # # plt.tight_layout()
 # # plt.savefig('l_w_l_c.PNG', dpi=300)
 # ################# l_w, l_c plot #####################
+
+subprocess.run(["./folder_zipper.sh"])

@@ -432,7 +432,7 @@ t0     = t0_k_coefs[1]
 k_coef = t0_k_coefs[2]
 # temporal delta functions
 
-r_mat = np.loadtxt("data/"+'r_mat.txt', delimiter=',')
+#r_mat = np.loadtxt("data/"+'r_mat.txt', delimiter=',')
 # np.savetxt("data/"+'th_1_mat.txt', th_1_mat, fmt='%.5e', delimiter=',')
 # np.savetxt("data/"+'th_2_mat.txt', th_2_mat, fmt='%.5e', delimiter=',')
 # np.savetxt("data/"+'th_3_mat.txt', th_3_mat, fmt='%.5e', delimiter=',')
@@ -456,3 +456,4 @@ n_org = np.shape(A_w_mat)[0]
 cost_dict, cost_mat = cost_calc_derivs("both")
 
 np.savetxt("data/"+'cost_mat_final.txt', cost_mat, fmt='%.5e', delimiter=',')
+np.savetxt('cost_mat_final.txt', cost_mat, fmt='%.5e', delimiter=',')

@@ -1086,12 +1086,12 @@ for org_c in range(n_org):
 #     code = f.read()
 # exec(code)
 
-np.savetxt("data/"+'r_mat.txt', r_mat, fmt='%.5e', delimiter=',')
-np.savetxt("data/"+'th_1_mat.txt', th_1_mat, fmt='%.5e', delimiter=',')
-np.savetxt("data/"+'th_2_mat.txt', th_2_mat, fmt='%.5e', delimiter=',')
-np.savetxt("data/"+'th_3_mat.txt', th_3_mat, fmt='%.5e', delimiter=',')
-np.savetxt("data/"+'th_v_w_mat.txt', th_v_w_mat, fmt='%.5e', delimiter=',')
-np.savetxt("data/"+'th_v_c_mat.txt', th_v_c_mat, fmt='%.5e', delimiter=',')
+#np.savetxt("data/"+'r_mat.txt', r_mat, fmt='%.5e', delimiter=',')
+#np.savetxt("data/"+'th_1_mat.txt', th_1_mat, fmt='%.5e', delimiter=',')
+#np.savetxt("data/"+'th_2_mat.txt', th_2_mat, fmt='%.5e', delimiter=',')
+#np.savetxt("data/"+'th_3_mat.txt', th_3_mat, fmt='%.5e', delimiter=',')
+#np.savetxt("data/"+'th_v_w_mat.txt', th_v_w_mat, fmt='%.5e', delimiter=',')
+#np.savetxt("data/"+'th_v_c_mat.txt', th_v_c_mat, fmt='%.5e', delimiter=',')
 np.savetxt("data/"+'A_w_mat.txt', A_w_mat, fmt='%.5e', delimiter=',')
 np.savetxt("data/"+'A_c_mat.txt', A_c_mat, fmt='%.5e', delimiter=',')
 
@@ -1099,9 +1099,9 @@ np.savetxt("data/"+'beta_w_aff_mat.txt', beta_w_aff_mat, fmt='%.5e', delimiter='
 np.savetxt("data/"+'beta_c_aff_mat.txt', beta_c_aff_mat, fmt='%.5e', delimiter=',')
 
 np.savetxt("data/"+'A_w_aff_mat.txt',   A_w_aff_mat,   fmt='%.5e', delimiter=',')
-np.savetxt("data/"+'A_w_unaff_mat.txt', A_w_unaff_mat, fmt='%.5e', delimiter=',')
+#np.savetxt("data/"+'A_w_unaff_mat.txt', A_w_unaff_mat, fmt='%.5e', delimiter=',')
 np.savetxt("data/"+'A_c_aff_mat.txt',   A_c_aff_mat,   fmt='%.5e', delimiter=',')
-np.savetxt("data/"+'A_c_unaff_mat.txt', A_c_unaff_mat, fmt='%.5e', delimiter=',')
+#np.savetxt("data/"+'A_c_unaff_mat.txt', A_c_unaff_mat, fmt='%.5e', delimiter=',')
 np.savetxt("data/"+'A_c_v_mat.txt',   A_c_v_mat,   fmt='%.5e', delimiter=',')
 np.savetxt("data/"+'A_w_v_mat.txt',   A_w_v_mat, fmt='%.5e', delimiter=',')
 
