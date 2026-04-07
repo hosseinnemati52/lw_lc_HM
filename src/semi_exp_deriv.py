@@ -39,10 +39,15 @@ a_list = W_mix_fit_smples_coefs[0,:]
 b_list = W_mix_fit_smples_coefs[1,:]
 c_list = W_mix_fit_smples_coefs[2,:]
 
-random_sample_ind_w = np.random.randint(np.shape(W_mix_fit_smples_coefs)[1])
-target_a = a_list[random_sample_ind_w]
-target_b = b_list[random_sample_ind_w]
-target_c = c_list[random_sample_ind_w]
+# random_sample_ind_w = np.random.randint(np.shape(W_mix_fit_smples_coefs)[1])
+# target_a = a_list[random_sample_ind_w]
+# target_b = b_list[random_sample_ind_w]
+# target_c = c_list[random_sample_ind_w]
+
+target_a = (-1.2522e-4)
+target_b = (2.7756e-2)
+target_c = (8.001e-12)
+random_sample_ind_w = np.nan
 
 d1_mat = np.zeros((len(a_list), len(exp_time)))
 d2_mat = np.zeros((len(a_list), len(exp_time)))
@@ -59,7 +64,7 @@ discrete_y_d2_avg_exp = 2 * target_a
 # discrete_y_d2_err_exp = np.std(d2_mat, axis=0)/np.sqrt(len(a_list))
 discrete_y_d2_err_exp = np.std(d2_mat, axis=0)
 target_abc_fit = np.array([random_sample_ind_w, target_a, target_b, target_c])
-np.savetxt("target_abc_fit.csv", target_abc_fit, fmt='%.6f', delimiter=',')
+np.savetxt("target_abc_fit.csv", target_abc_fit, fmt='%.8f', delimiter=',')
 
 
 
@@ -91,13 +96,20 @@ t0_list = C_mix_fit_smples_coefs[1,:]
 k_list  = C_mix_fit_smples_coefs[2,:]
 y0_list = C_mix_fit_smples_coefs[3,:]
 
-random_sample_ind_c = np.random.randint(np.shape(C_mix_fit_smples_coefs)[1])
-target_L  =  L_list[random_sample_ind_c]
-target_t0 = t0_list[random_sample_ind_c]
-target_k  =  k_list[random_sample_ind_c]
-target_y0 = y0_list[random_sample_ind_c]
+# random_sample_ind_c = np.random.randint(np.shape(C_mix_fit_smples_coefs)[1])
+# target_L  =  L_list[random_sample_ind_c]
+# target_t0 = t0_list[random_sample_ind_c]
+# target_k  =  k_list[random_sample_ind_c]
+# target_y0 = y0_list[random_sample_ind_c]
+
+random_sample_ind_c = np.nan
+target_L  =  5.59815e-1
+target_t0 = 38.822
+target_k  =  1.08124e-1
+target_y0 = -8.2903e-3
+
 target_coefs_c_fit = np.array([random_sample_ind_c, target_L, target_t0, target_k, target_y0])
-np.savetxt("target_coefs_c_fit.csv", target_coefs_c_fit, fmt='%.6f', delimiter=',')
+np.savetxt("target_coefs_c_fit.csv", target_coefs_c_fit, fmt='%.8f', delimiter=',')
 
 
 d1_mat = np.zeros((len(L_list), len(exp_time)))

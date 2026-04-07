@@ -62,7 +62,18 @@ if bw_middle<0:
     sys.exit()
 
 bw_list_hm = np.array(list(2**np.linspace(-1,0,10)) + list(2**np.linspace(0,1,10))[1:])*bw_middle
-tau_w_list_hm = np.array(list(2**np.linspace(-1,0,10)) + list(2**np.linspace(0,1,10))[1:])*tau_w_middle
+# tau_w_list_hm = np.array(list(2**np.linspace(-1,0,10)) + list(2**np.linspace(0,1,10))[1:])*tau_w_middle
+tau_min = 1
+tau_max = 50
+#tau_w_middle = 40
+if tau_w_middle<5:
+    tau_w_list_hm = list(np.linspace(tau_min,tau_w_middle,11)) + list(   np.logspace(np.log10(tau_w_middle), np.log10(tau_max), num=15, endpoint=True, base=10.0, dtype=None, axis=0)  )[1:]
+elif tau_w_middle<20:
+    tau_w_list_hm = list(np.linspace(tau_min,tau_w_middle,11)) + list(   np.logspace(np.log10(tau_w_middle), np.log10(tau_max), num=15, endpoint=True, base=10.0, dtype=None, axis=0)  )[1:]
+else:
+    tau_w_list_hm = list(np.linspace(tau_min,tau_w_middle,11)) + list(np.linspace(tau_w_middle, tau_max,10))[1:]
+    
+tau_w_list_hm = np.array(tau_w_list_hm)
 
 # np.savetxt("bc.csv", [bc], fmt='%.5f')
 # np.savetxt("lc.csv", [lc], fmt='%.5f')

@@ -256,13 +256,16 @@ def cost_calc_derivs(cost_key):
     # discrete_y_d1_err_exp = np.std(d1_mat, axis=0)/np.sqrt(len(a_list))
     # discrete_y_d2_avg_exp = np.mean(d2_mat, axis=0)
     # discrete_y_d2_err_exp = np.std(d2_mat, axis=0)/np.sqrt(len(a_list))
-    try:
-        y_d1_w_semi_exp = np.loadtxt("y_d1_w_semi_exp.csv", delimiter=',')
-        y_d2_w_semi_exp = np.loadtxt("y_d2_w_semi_exp.csv", delimiter=',')
-    except FileNotFoundError:
-        subprocess.run(["python", "semi_exp_deriv.py"])
-        y_d1_w_semi_exp = np.loadtxt("y_d1_w_semi_exp.csv", delimiter=',')
-        y_d2_w_semi_exp = np.loadtxt("y_d2_w_semi_exp.csv", delimiter=',')
+    # try:
+    #     y_d1_w_semi_exp = np.loadtxt("y_d1_w_semi_exp.csv", delimiter=',')
+    #     y_d2_w_semi_exp = np.loadtxt("y_d2_w_semi_exp.csv", delimiter=',')
+    # except FileNotFoundError:
+    #     subprocess.run(["python", "semi_exp_deriv.py"])
+    #     y_d1_w_semi_exp = np.loadtxt("y_d1_w_semi_exp.csv", delimiter=',')
+    #     y_d2_w_semi_exp = np.loadtxt("y_d2_w_semi_exp.csv", delimiter=',')
+    y_d1_w_semi_exp = np.loadtxt("y_d1_w_semi_exp.csv", delimiter=',')
+    y_d2_w_semi_exp = np.loadtxt("y_d2_w_semi_exp.csv", delimiter=',')
+    
     discrete_y_d1_avg_exp = y_d1_w_semi_exp[1,:]
     discrete_y_d1_err_exp = y_d1_w_semi_exp[2,:]
     discrete_y_d2_avg_exp = y_d2_w_semi_exp[1,:]
